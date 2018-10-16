@@ -1,0 +1,4 @@
+RESULT = app
+SOURCES = App.ml
+OCAMLMAKEFILE = OCamlMakefile
+include $(OCAMLMAKEFILE)

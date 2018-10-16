@@ -1,0 +1,26 @@
+let () =
+  List.iter (fun c -> print_string (Card.toStringVerbose c ^ " ")) Card.allHearts ;
+  print_newline ();
+  List.iter (fun c -> print_string (Card.toStringVerbose c ^ " ")) Card.allDiamonds ;
+  print_newline ();
+  List.iter (fun c -> print_string (Card.toStringVerbose c ^ " ")) Card.allClubs ;
+  print_newline ();
+  List.iter (fun c -> print_string (Card.toStringVerbose c ^ " ")) Card.allSpades ;
+  print_newline ();
+  List.iter (fun c -> print_string (Card.toString c ^ " ")) Card.all ;
+  print_newline ();
+  print_endline (string_of_int (Card.compare (Card.newCard Card.Value.As Card.Color.Club) (Card.newCard Card.Value.King Card.Color.Heart))) ;
+  print_endline (string_of_int (Card.compare (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.As Card.Color.Heart))) ;
+  print_endline (string_of_int (Card.compare (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.Queen Card.Color.Heart))) ;
+  print_endline (Card.toStringVerbose (Card.max (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.As Card.Color.Heart))) ;
+  print_endline (Card.toStringVerbose (Card.max (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.Queen Card.Color.Heart))) ;
+  print_endline (Card.toStringVerbose (Card.min (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.As Card.Color.Heart))) ;
+  print_endline (Card.toStringVerbose (Card.min (Card.newCard Card.Value.Queen Card.Color.Club) (Card.newCard Card.Value.Queen Card.Color.Heart))) ;
+  print_endline (Card.toStringVerbose (Card.best [(Card.newCard Card.Value.T5 Card.Color.Club) ;
+                                                    (Card.newCard Card.Value.T5 Card.Color.Heart) ;
+                                                    (Card.newCard Card.Value.T3 Card.Color.Heart) ])) ;
+  print_endline (string_of_bool (Card.isOf (Card.newCard Card.Value.As Card.Color.Club) Card.Color.Club)) ;
+  print_endline (string_of_bool (Card.isOf (Card.newCard Card.Value.As Card.Color.Club) Card.Color.Spade)) ;
+  print_endline (string_of_bool (Card.isSpade (Card.newCard Card.Value.As Card.Color.Club))) ;
+  print_endline (string_of_bool (Card.isSpade (Card.newCard Card.Value.As Card.Color.Spade))) ;
+  print_newline ();

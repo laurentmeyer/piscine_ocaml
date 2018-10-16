@@ -1,0 +1,4 @@
+RESULT = set
+SOURCES = Set.ml
+OCAMLMAKEFILE = OCamlMakefile
+include $(OCAMLMAKEFILE)

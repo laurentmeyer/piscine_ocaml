@@ -1,0 +1,1 @@
+type t = Eat | Thunder | Bath | Kill | Time | None
